@@ -1,8 +1,8 @@
-require 'rubygems'
-require 'bundler/setup'
 require 'net/http'
+require 'rack'
 
-Bundler.require(:default)
+require 'opentelemetry/sdk'
+require 'opentelemetry/adapters/all'
 
 OpenTelemetry::SDK.configure do |c|
   c.use_all
